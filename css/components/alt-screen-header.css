@@ -6,6 +6,11 @@
     justify-content: center;
 }
 
+.alt-header__column {
+    width: 33%;
+}
+/* width를 고루 분배한 후 margin-right: auto, margin-left auto, text-align:center로 세 구간 균형맞추기 hack skill 일종의 치트키 */
+
 .alt-header__title {
     font-size: 28px;
     font-weight: 600;
@@ -15,6 +20,16 @@
     margin-right: auto;
 }
 
+.alt-header__column:nth-child(2) {
+    text-align: center;
+}/* second child */
+
 .alt-header__column:last-child {
     margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alt-header__column span:last-child {
+    margin-left: 20px;
 }
