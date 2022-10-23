@@ -45,6 +45,7 @@
     width: 100%;
     display: flex;
     /* 요소들이 옆으로 오게 만듦 */
+    margin-bottom: 25px;
 }
 
 .message-row img {
@@ -80,3 +81,32 @@
     opacity: 0.8;
     font-size: 14px;
 }
+
+.message-row--own {
+    justify-content: flex-end;
+    /* 수평으로 적용됨 */
+}
+
+.message-row--own .message__bubble {
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+
+.message-row--own .message__info {
+    flex-direction: row-reverse;
+} /* father이 flex 요소를 가져서 가능함 */
+
+/* 위의 row-reverse보다 조금 복잡하지만 순서를 바꿀 수 있는 방법
+ -> flex의 children은 order을 사용할 수 있음 
+
+.message-row--own .message__bubble {
+    order: 1;
+}
+
+.message-row--own .message__time {
+    order: 0;
+} */
