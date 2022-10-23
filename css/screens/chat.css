@@ -11,6 +11,7 @@
     background-color: #abc1d1;
     box-sizing: border-box;/* 화면에서 안보이는 경우에 설정하는 법 */
 }
+/* 어떤 요소를 고정하면 이전의 box들과는 다른 layer가 됨 */
 
 #chat-screen .status-bar {
     z-index: 2;
@@ -23,5 +24,18 @@
 }
 
 .main-chat {
-    margin-top: 150px;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    /* 요소들 위아래 정렬 */
+    align-items: center;
+    /* flex-direction column으로 인해 크로스 축이 세로축 => 세로축을 가운데 정렬 */
+}
+
+.chat__timestamp {
+    color: white;
+    background-color: #92a4b2;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 25px;
 }
