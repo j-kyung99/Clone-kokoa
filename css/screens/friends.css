@@ -28,3 +28,18 @@
     justify-content: space-between;
     color: rgba(0,0,0,0.5);
 }
+
+#splash-screen {
+    background-color: var(--yellow);
+    position: absolute;
+    /* absolute인 div는 가장 가까운 relative인 부모에 맞춰 정렬됨 */
+    width: 100vw;
+    /* 화면 넓이의 100%를 의미 */
+    height: 100vh;
+    /* 화면 높이의 100%를 의미 */
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 132px;
+}
